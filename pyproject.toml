@@ -1,0 +1,37 @@
+[project]
+name = "qwen-finetune"
+version = "0.1.0"
+description = "LoRA fine-tuning for Qwen2-1.5B / Qwen3-4B"
+authors = [
+    { name = "Your Name" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "transformers>=4.40.0",
+    "datasets>=2.18.0",
+    "peft>=0.10.0",
+    "accelerate>=0.30.0",
+    "bitsandbytes>=0.42.0",
+    "torch>=2.2.0",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.3.0",
+]
+
+[tool.poetry]
+packages = [{ include = "src" }]
+
+[tool.poetry.scripts]
+train = "src.main:run"
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.accelerate]
+# Optional Auto Config for multi-GPU / DeepSpeed
+# You can run: accelerate config
+compute_environment = "LOCAL_MACHINE"
+distributed_type = "NO"
+mixed_precision = "fp16"

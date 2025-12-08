@@ -1,0 +1,5 @@
+{"input": "The system is running smoothly with no errors", "label": "ok"}
+{"input": "Critical error: Database connection failed", "label": "not ok"}
+{"input": "All tests passed successfully", "label": "ok"}
+{"input": "Warning: Memory usage exceeds 90%", "label": "not ok"}
+{"input": "File upload completed without issues", "label": "ok"}

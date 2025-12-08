@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv*/
+*.egg-info/
+dist/
+build/
+
+# Model files (large)
+qwen_finetune/
+*.bin
+*.safetensors
+
+# Logs
+*.log
+training.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Poetry
+poetry.lock
+
+# Temporary files
+*.tmp
+capture/
